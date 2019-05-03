@@ -13,8 +13,4 @@ RUN apt-get update && apt-get install -y --no-install-recommends build-essential
 RUN apt-get install wget
 
 # Copy files
-ENV SCRIPT_DIR=/scripts \
-	OUTDIR=$SCRIPT_DIR/outdir
-
-RUN mkdir -p $SCRIPT_DIR \
-	&& mkdir -p $OUTDIR
+COPY ./ ./
