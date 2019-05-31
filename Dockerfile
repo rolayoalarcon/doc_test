@@ -9,8 +9,6 @@ ENV DEBIAN_FRONTEND=noninteractive
 # Install R and Python and essential dependencies
 RUN apt-get update && apt-get install -y --no-install-recommends build-essential r-base python3.6 python3-pip python3-setuptools python3-dev
 
-# Install additional dependencies
-RUN apt-get install wget
 
 # Copy files
 COPY ./ ./
